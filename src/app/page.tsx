@@ -15,7 +15,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By {process.env.CREATOR}
+            Hello world
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
