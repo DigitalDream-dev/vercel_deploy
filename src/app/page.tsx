@@ -15,7 +15,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Hello world
+            Hello world, or not hello world?
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
