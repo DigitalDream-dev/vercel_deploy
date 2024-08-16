@@ -1,0 +1,10 @@
+name: Production Deployment
+on:
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  Deploy-Production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        run: echo "hello" 

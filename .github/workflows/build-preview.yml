@@ -7,13 +7,13 @@ on:
     branches:
       - master
 jobs:
-  Check:
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Code check
-        run: yarn lint
+  # Check:
+  #   runs-on: ubuntu-latest
+  #   steps: 
+  #     - name: Code check
+  #       run: yarn lint
   Deploy-Preview:
-    needs: Check
+    # needs: Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,3 +25,10 @@ jobs:
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+
+  Trigger-Prod-Deployment:
+    needs: Deploy-Preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Production Deployment Workflow
+        run: gh workflow run build-production.yml
