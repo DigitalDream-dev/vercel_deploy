@@ -13,6 +13,7 @@ jobs:
       - name: Code check
         run: yarn lint
   Deploy-Preview:
+    needs: Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
