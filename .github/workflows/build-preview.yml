@@ -27,9 +27,11 @@ jobs:
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
   Deploy-Prod:
+    runs-on: ubuntu-latest
     steps:
-      - uses: trstringer/manual-approval@v1
-      - with:
+      - name: Manual Approval
+        uses: trstringer/manual-approval@v1
+        with:
           secret: ${{ github.TOKEN }}
           approvers: DigitalDream-dev
           minimum-approvals: 1
