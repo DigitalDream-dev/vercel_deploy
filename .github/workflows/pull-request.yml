@@ -6,7 +6,7 @@ on:
       - opened
       - synchronize
 jobs:
-  code check:
+  codeCheck:
     runs-on: ubuntu-latest
     steps: 
       - name: Code check
