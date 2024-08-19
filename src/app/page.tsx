@@ -15,7 +15,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Hello my world 2
+            Hello my world 3
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
