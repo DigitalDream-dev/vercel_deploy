@@ -8,6 +8,7 @@ on:
 jobs:
   codeCheck:
     runs-on: ubuntu-latest
+    environment: Preview – vercel-deploy
     steps: 
       - name: Code check
         run: yarn lint
